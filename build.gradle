@@ -2,7 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.4.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'com.google.cloud.tools.jib' version '2.8.0'
+	id 'com.google.cloud.tools.jib' version '3.0.0'
 }
 
 jib {
@@ -23,6 +23,10 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
