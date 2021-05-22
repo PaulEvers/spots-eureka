@@ -5,7 +5,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'a6e1a27a-7959-441f-8e43-1eeb8fbb5947'
-  imageRepository: 'spots-gateway'
+  imageRepository: 'spots-eureka'
   containerRegistry: 'spotsregistry1.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
