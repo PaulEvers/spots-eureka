@@ -1,6 +1,19 @@
 trigger:
   - main
 
+variables:
+
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'a6e1a27a-7959-441f-8e43-1eeb8fbb5947'
+  imageRepository: 'spots-gateway'
+  containerRegistry: 'spotsregistry1.azurecr.io'
+  dockerfilePath: '**/Dockerfile'
+  tag: '$(Build.BuildId)'
+  imagePullSecret: 'spotsregistry11835b849-auth'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
 name: spots-eureka - $(Date:yyyyMMdd)$(Rev:.rr)
 
 stages:
