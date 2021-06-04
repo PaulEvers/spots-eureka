@@ -32,7 +32,11 @@ spec:
         name: spots-eureka
         ports:
         - containerPort: 8761
-        resources: {}
+        resources:
+          requests:
+            cpu: "250m"
+          limits:
+            cpu: "500m"
       hostname: spots-eureka
       restartPolicy: Always
       serviceAccountName: ""
